@@ -1,0 +1,140 @@
+
+body {
+  padding-top: 0;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 70px;
+  background-color: #343a40;
+  border-right: 1px solid #dee2e6;
+  transition: width 0.3s; /* Adicionando transição para a largura do menu */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remover margem padrão */
+}
+
+.sidebar-item {
+  padding: 15px 0;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #495057; /* Mudança de cor ao passar o mouse */
+}
+.sidebar-item i {
+  font-size: 24px;
+  color: #ffffff;
+  margin-right: 10px; /* Adicionar espaço entre ícone e texto */
+  width: 24px; /* Definir largura fixa para os ícones */
+}
+
+.sidebar-item span {
+  display: none;
+  color: #ffffff;
+}
+
+.content {
+  margin-left: 70px;
+  padding: 20px;
+  transition: margin-left 0.3s; /* Adicionando transição para a margem do conteúdo */
+}
+
+.sidebar-expanded {
+  width: 210px; /* Largura expandida do menu */
+}
+
+.sidebar-expanded .sidebar-item {
+  cursor: pointer;
+  display: flex;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.sidebar-expanded .sidebar-item i {
+  margin-right: 0; /* Remover margem entre ícone e texto */
+}
+
+.sidebar-expanded .sidebar-item span {
+  margin-left: 7px;
+  display: inline; /* Mostrar texto quando o menu é expandido */
+}
+
+.content-expanded {
+  margin-left: 210px; /* Ajustar margem do conteúdo quando o menu é expandido */
+}
+
+.expand-button {
+  padding-top: 15px; /* Espaçamento superior para o botão */
+  text-align: center;
+}
+
+.expand-button button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #343a40;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.sidebar-footer i {
+    width: 100%;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.sidebar-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#userIcon {
+  cursor: pointer;
+}
+#userIcon i {
+    width: 100%;
+    font-size: 25px !important;
+}
+#userIcon span{
+    color: #fff;
+}
+
+/* Estilo para a lista de opções ao lado do menu */
+.user-options {
+  border: 2px solid #343a40;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 1px;
+  left: 70px; /* Ajuste para a largura do menu */
+  width: 210px;
+  padding: 10px;
+  display: none; /* Inicialmente oculta */
+  z-index: 99; /* Z-index maior que o menu para sobrepor */
+}
+
+.user-options a {
+  display: block;
+  color: #343a40;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.user-options a:hover {
+  color: #495057;
+}
